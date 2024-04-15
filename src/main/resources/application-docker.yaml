@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:root@mongodb:27017/product_service?authSource=admin
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin-microservice:9411
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:password@discovery-server:8761/eureka
